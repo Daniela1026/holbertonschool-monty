@@ -1,5 +1,7 @@
 #include "monty.h"
 
+glob_t global = {NULL, NULL};
+
 /**
 * main - main
 * @argc: Character int

@@ -1,5 +1,6 @@
 #include "monty.h"
 
+int value;
 
 /**
 * newnode - Create new node
