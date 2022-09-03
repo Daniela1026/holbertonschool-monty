@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
-*
-*
-*
+* _command - Read the files
+* @argv: Command char
+* Return:  exit
 */
 
 void _command(char *argv)
@@ -17,7 +17,7 @@ void _command(char *argv)
 
 	global.fd = fopen(argv, "r");
 	if (global.fd)
-	{ 
+	{
 		while (getline(&global.line, &bufsize, global.fd) != -1)
 		{
 			n++;
