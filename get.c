@@ -1,5 +1,14 @@
 #include "monty.h"
 
+/**
+* get_ - Function opcode
+* @stack: Parameter
+* @arg: Character char
+* @item: Character char
+* @n: Character int
+* Return: Always 0
+*/
+
 int get_(stack_t **stack, char *arg, char *item, int n)
 {
 	int i = 0;

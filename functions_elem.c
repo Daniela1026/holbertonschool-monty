@@ -1,34 +1,35 @@
 #include "monty.h"
 
-int value;
+
 /**
-*
-*
-*
+* newnode - Create new node
+* @n: Character int
+* Return: new node
 */
 stack_t *newnode(int n)
 {
-        stack_t *new = NULL;
+	stack_t *new = NULL;
 
-        new = malloc(sizeof(stack_t));
-        if (new == NULL)
-        {
-                dprintf(STDERR_FILENO, "Error: malloc failed\n");
-                exit(EXIT_FAILURE);
-        }
-        new->n = n;
-        new->next = NULL;
-        new->prev = NULL;
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	new->n = n;
+	new->next = NULL;
+	new->prev = NULL;
 
-        return (new);
+	return (new);
 }
 
 
 /**
-*
-*
-*
+* _push - Push a new element to the top of the stack
+* @stack: Parameter
+* @line_number: Character unsigned int
 */
+
 void _push(stack_t **stack, unsigned int line_number)
 {
 
@@ -44,9 +45,9 @@ void _push(stack_t **stack, unsigned int line_number)
 }
 
 /**
-*
-*
-*
+* _pall - Print elements stack
+* @stack: Parameter
+* @n: Character unsigned int
 */
 void _pall(stack_t **stack, unsigned int n)
 {
@@ -63,27 +64,9 @@ void _pall(stack_t **stack, unsigned int n)
 }
 
 /**
-*
-*
-*
-*/
-void free_dlistint(stack_t *stack)
-{
-	stack_t *current = NULL;
-
-	current = stack;
-
-	if (current != NULL)
-	{
-		free_dlistint(current->next);
-		free(current);
-	}
-}
-
-/**
-*
-*
-*
+* _isdigit - Checks digit
+* @c: Character char
+* Return: 0 and 1
 */
 int _isdigit(char *c)
 {
@@ -106,9 +89,10 @@ int _isdigit(char *c)
 
 /**
  * _pint - prints the value at the top of the stack.
- * @stack: Stack list
- * @line_number: Number of the line
+ * @stack: Parameter
+ * @line_number: Character unsigned int
  */
+
 void _pint(stack_t **stack, unsigned int line_number)
 {
 	if (!*stack || !stack)
